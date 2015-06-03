@@ -1,23 +1,23 @@
 $(document).ready(function(){
-	$(".album").click(function() {
-  	$(".menu").animate({
-  		top: "0px",
-     	left: "0px"
-   	}, 400);
-		$("body").animate({
-     	marginLeft: "195px"
-  	}, 400);
+  $(".album").click(function() {
+    $(".menu").animate({
+      top: "0px",
+      left: "0px"
+    }, 400);
+    $("body").animate({
+      marginLeft: "195px"
+    }, 400);
     $("#album-container").hide(400);
- 	});
+  });
 
- 	$('.icon-close').click(function() {
-   	$('.menu').animate({
-    	left: "-195px"
-   	}, 400);
-		$('body').animate({
-    	marginLeft: "0px",
+  $('.icon-close').click(function() {
+    $('.menu').animate({
+      left: "-195px"
+    }, 400);
+    $('body').animate({
+      marginLeft: "0px",
       marginRight: "0px"
-  	}, 400);
+    }, 400);
     $("header").html("My Photo Album").css("color", "white").css("background-color","#333333");
     $("#album-container").show(200);
     $("#album1").hide(200);
@@ -26,7 +26,7 @@ $(document).ready(function(){
     $("#album4").hide(200);
     $("#album5").hide(200);
     $("#album6").hide(200);
-	});
+  });
   $(".album1").click(function(){
     $("header").html("Kids and I").css("color", "black").css("background-color","white");
     $(".photo1a").hide().removeClass("col-sm-offset-2").removeClass("col-sm-8").addClass("col-sm-4").show(200);
