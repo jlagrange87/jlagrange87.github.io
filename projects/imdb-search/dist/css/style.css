@@ -15,6 +15,7 @@ body{
 	margin-top: 5%;
 	font-size: 75px;
 	color: white;
+	transition: font-size ease 1s;
 }
 input{
     border: 1px solid #d1d1d1;
@@ -76,4 +77,23 @@ li:hover{
 	display: table;
 	text-align: left;
 	color:white;
+}
+@media (max-width: 610px){
+	.big{
+		font-size: 55px;
+	}
+	li{
+		font-size: 13px;
+	}
+	.btn{
+	font-size: 13px;
+	}
+	input{
+		font-size: 13px;
+		width: 100px;
+	}
+	::-webkit-input-placeholder { font-size:13px; }
+	::-moz-placeholder { font-size:13px; }
+	:-ms-input-placeholder { font-size:13px; }
+	input:-moz-placeholder { font-size:13px; }
 }
