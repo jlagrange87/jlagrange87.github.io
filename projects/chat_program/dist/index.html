@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Super Chat App</title>
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" type="text/css" href="styles/jquery.cssemoticons.css">
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar" style="background-color: white"></span>
+					<span class="icon-bar" style="background-color: white"></span>
+					<span class="icon-bar" style="background-color: white"></span>
+				</button>
+				<a class="navbar-brand" style="color: white" href="#">Super Chat Out 3.0</a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+		<!-- 			<li class="active"><a style="background-color: #337AB7; color: white"href="#">Home<span class="sr-only">(current)</span></a></li> -->
+					<li><a href="#leaderboard" style="color: white">Leaderboards</a></li>
+					<li><a href="#roomHistory" style="color: white">Room History</a></li>
+				</ul>
+				<form class="navbar-form navbar-left" role="search" id="userSearch">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search User" id="whoIs">
+					</div>
+					<button type="submit" class="btn btn-success">Search</button>
+				</form>
+			</div>
+		</div>
+	</nav>
+	<section class= "page" id="home">
+		<div class="container" style="text-align: center">
+			<div id="login-page">SUPER CHAT OUT!!!</div>
+			<img class=" img img-rounded img-responsive" src="http://media2.giphy.com/media/8KrhxtEsrdhD2/giphy.gif">
+			<form id="login"> 
+				<div>
+					<div class="input-group input-group-md">
+						<span class="input-group-addon" id="sizing-addon3">Username:</span>
+						<input type="text" class="form-control" id="user" aria-describedby="sizing-addon3">
+					</div>
+				</div>
+				<div>
+					<div class="input-group input-group-md">
+						<span class="input-group-addon" id="sizing-addon3"> Chatroom:</span>        
+						<input type="text" class="form-control" id="roomNum" aria-describedby="sizing-addon3">
+					</div>
+					<button class="btn btn-primary btn-block btn-lg">Login</button>
+				</div>
+			</form>
+		</div>
+	</section>
+	<section class="page" id="chatRoom">
+		<div class="well col-sm-10 col-sm-offset-1">
+			<div class="chat-header"></div>
+			<div id="chat" class="scrollMe"></div>
+		</div>
+		<div class="col-sm-10 col-sm-offset-1">
+			<form id="formSubmit">
+				<div class="input-group">
+					<input type="text" class="form-control" id="msg" placeholder="Message...">
+					<span class="input-group-btn">
+						<button class="btn btn-success">Submit</button>
+					</span>
+				</div>
+			</form>
+		</div>
+	</section>
+	<section class="page" id="leaderboard">
+		<div class="container">
+			<div class="well col-sm-4">
+				<div class="leaderboard-header"><hr>Most Active Users:<hr></div>
+				<ol id="userList"></ol>
+			</div>
+			<div class="well col-sm-4">
+				<div class="leaderboard-header"><hr>Most Popular Rooms:<hr></div>
+				<ol id="roomList"></ol>
+			</div>
+			<div class="well col-sm-4">
+				<div class="leaderboard-header"><hr>Most Recent Users:<hr></div>
+				<ol id="activeList"></ol>
+			</div>
+		</div>
+	</section>
+	<section class="page" id="userProfile">    
+		<div class="container">
+			<div class="well">
+				<div class="profile-header"></div>
+				<div id="profilemessages"><div>Loading. . .</div></div>
+			</div>
+		</div>
+	</section>
+	<section class="page" id="roomHistory">    
+		<div class="container">
+			<div class="well">
+				<div class="history-header"></div>
+				<div id="history-results"><div>Please enter the proper format in the fields below.</div></div>
+			</div>
+			<form id="history-submit" class="col-sm-8 col-sm-offset-2">
+				<input type="text" class="form-control" id="hist1" placeholder="Start Date Example... 06-04-2015">
+				<input type="text" class="form-control" id="hist2" placeholder="End Date Example... 06-06-2015">
+				<input type="text" class="form-control" id="hist-room" placeholder="Room Number... 1,2,3">
+				<button class="btn btn-success btn-lg btn-block">Submit</button>
+			</form>
+		</div>
+	</section>
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.cssemoticons.min.js"></script>
+	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
+	<script type="text/javascript" src="bower_components/backbone/backbone-min.js"></script>
+	<script type="text/javascript" src="bower_components/moment/moment.js"></script>
+	<script type="text/javascript" src="scripts/main.js"></script>
+	<audio muted></audio>
+</body>
+</html>
