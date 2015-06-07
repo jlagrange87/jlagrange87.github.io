@@ -54,10 +54,11 @@ $(document).ready(function(){
 	var messageArray = [];
 	var roomHistoryObject = {};
 	$("#login").submit(function(e){
+		e.preventDefault();
 		loginObject.userName = $("#user").val();
 		loginObject.chatRoomNum = $("#roomNum").val();
-		myRouter.navigate("chatRoom/"+$("#roomNum").val(), {trigger: true})
-		$(".chat-header").append("<hr>Welcome to Chat Room "+$("#roomNum").val()+"!<hr>");
+		myRouter.navigate("chatRoom/"+loginObject.chatRoomNum , {trigger: true})
+		$(".chat-header").append("<hr>Welcome to Chat Room "+loginObject.chatRoomNum +"!<hr>");
 		for(var i = 0; i < messageArray.length; i++){
 			var cPost = messageArray[i];
 			if(cPost.room == loginObject.chatRoomNum && cPost.messages.indexOf(".png") == -1 && cPost.messages.indexOf(".jpg") == -1 && cPost.messages.indexOf(".gif") == -1){
