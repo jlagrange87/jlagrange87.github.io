@@ -23,7 +23,6 @@ $(document).ready(function(){
 				$(".page").hide();
 				$("#chatRoom").fadeIn(1000);
 				$("body").append("<audio src='audio/Welcome.mp3' preload='preload' autoplay='autoplay'></audio>")
-				setInterval(getMessages, 500)
 
 		},
 			leaderboard: function(){
@@ -57,7 +56,8 @@ $(document).ready(function(){
 		e.preventDefault();
 		loginObject.userName = $("#user").val();
 		loginObject.chatRoomNum = $("#roomNum").val();
-		myRouter.navigate("chatRoom/"+loginObject.chatRoomNum , {trigger: true})
+		myRouter.navigate("chatRoom/"+loginObject.chatRoomNum , {trigger: true});
+		setInterval(getMessages, 500);
 		$(".chat-header").append("<hr>Welcome to Chat Room "+loginObject.chatRoomNum +"!<hr>");
 		for(var i = 0; i < messageArray.length; i++){
 			var cPost = messageArray[i];
